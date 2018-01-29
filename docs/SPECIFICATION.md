@@ -1,6 +1,6 @@
 # Specification
 ## Definition
-An **XML Line Record** is defined a XML String beginning with an XML element and ending with the same XML Element written on a single line with a single line feed character appended at the end of line to distinguish one XML Line Record from the other.
+An **XML Line Record** is defined as a XML String beginning with an XML element and ending with the same XML Element written on a single line with a single line feed character appended at the end of line to distinguish one XML Line Record from the other.
 
 An **XML Lines File** may contain `1 to n` XML Line Records and will carry a file extension of `.xlr` or any other mutually agreed file extension between the producer and the consumer. However the file extension `.xml` must not be used to denote XML Lines files.
 ## Format
