@@ -34,7 +34,7 @@ Consider the following XSD Schema fragment from [ESMA DRAFT15auth.016.001.01](ht
 </xs:simpleType>
 ```
 Neither JSON nor AVRO Schemas come close to matching the expressiveness of an XML Schema. This makes XML ideal as a format of data exchange in the wider world. And that's not going to change.
-The advantage of such an expressive schema language means that validations on incoming data is performed by parser, validator libraries such as JAXP and JAXB automatically rather than developers wasting time and effort writing tones and tones validation logic.
+The advantage of such an expressive schema language means that validations on incoming data is performed by parser and validator libraries such as JAXP and JAXB automatically rather than developers wasting time and effort writing tones and tones of validation logic.
 
 Below is an example of using JAXB to read XML Line Records.
 
