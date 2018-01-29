@@ -54,14 +54,16 @@ Schema validation can be easily added to JAXB while unmarshalling a XML Line Rec
 ## Writing
 JAXB elements can just easily be converted back to String.
 ```java
-public String marshal(JAXBElement<?> jaxbElement) {
-		try {
-			StringResult result = new StringResult();
-      marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, false);
-			marshaller.marshal(jaxbElement, result);
-			return result.toString();
-		} catch (Exception e) {
-			throw new IllegalStateException(e);
-		}
-	}
+private static void writeDocument() {
+    try {
+        JAXBContext context = JAXBContext.newInstance(PersonType.class, AddressType.class);
+        Marshaller m = context.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
+        StringWriter writer = new StringWriter();
+        m.marshal(getPersonType(), writer);
+        xmlString = writer.toString();
+    } catch (JAXBException e) {
+        e.printStackTrace();
+    }
+}
 ```
