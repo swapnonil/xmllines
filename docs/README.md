@@ -45,4 +45,4 @@ XML Lines format is inspired from the excellent [JSON Lines Format](http://jsonl
 
 ## Recommendations   
 1. The structure and content of an XML Line Record can be defined using an XSD Schema. It is recommend to use XSD Schema based validation while reading an XML Line Record, especially when dealing with untrusted third parties.
-2. XML is hierarchical and that is one its great strengths. Do not flatten out XMLs just to fit it into tabular structures as Spark Dataframes. If necessary break XMLs into tabular structures, just as one does Object to Relational mapping.
+2. XML is hierarchical and that is one of its great strengths. Do not flatten out XMLs just to fit it into tabular structures as Spark Dataframes. If necessary break XMLs into tabular structures, just as one does Object to Relational mapping.
