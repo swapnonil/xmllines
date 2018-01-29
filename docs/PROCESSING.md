@@ -1,10 +1,10 @@
 # Apache Spark based Processing
 
 ## Reading
-Reading XML Lines Records can be accomplished like this
-1. Read each line as a String. This results in a RDD of Strings.
-2. Loop over this RDD of Strings.
-3. Convert each String into an XML document. String to XML and XML to Strings functions exists with many libraries. Libraries such as JAXB, X-Stream take the pain out of parsing XML. JAXB can be paired with XML Schemas to perform validations as well.
+Reading XML Lines Records can be as simple as
+1. Reading each line as a String. This results in a RDD of Strings.
+2. Looping over this RDD of Strings.
+3. Converting each String into an XML document. String to XML and XML to Strings functions exists with many libraries. Libraries such as JAXB and X-Stream take the pain out of parsing XML. JAXB can also be paired with XML Schemas to perform validations as well.
 
 Consider the following XSD Schema fragment from [ESMA DRAFT15auth.016.001.01](https://www.iso20022.org/documents/messages/auth/schemas/auth.016.001.01.xsd)
 ```XML
