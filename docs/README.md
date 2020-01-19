@@ -1,6 +1,9 @@
 # Introduction
 
-XML Lines is an XML based format that does away with XML Documents as a method of representing XML Data. It retains all essential data but strips away all forms of superfluous pretty printing elements such as tabs, spaces and line feeds.
+XML Lines is an XML based format that does away with XML Documents as a method of representing XML Data. It retains all essential data but strips away all forms of superfluous pretty printing elements such as headers, plural tags, tabs, spaces and line feeds.
+
+## Motivation
+XML Lines format is inspired from the excellent [JSON Lines Format](http://jsonlines.org) that has found broad acceptance and support within the Apache Spark Community. While libraries like [Databricks XML](https://github.com/databricks/spark-xml) to process XML in its native form exist, a format that does away with superfluous tags, making XML easy to validate and process in a distributed manner cannot be a bad thing.
 
 ## Example
 XML Documents are normally represented as below
@@ -39,9 +42,6 @@ As is evident, XML processing instructions, headers containing mostly meta-data 
 1. That are built to process One line or One Record at time.
 2. That support distributed reader processes. Readers can read and load non over-lapping chunks of XML in a parallel manner.
 3. That support distributed writers. Writers that write out XML data in parallel without worrying as to which of those writers need to add the last plural tag (books in this case) at the end of the last file.
-
-## Motivation
-XML Lines format is inspired from the excellent [JSON Lines Format](http://jsonlines.org) that has found broad acceptance and support within the Apache Spark Community. While libraries like [Databricks XML](https://github.com/databricks/spark-xml) to process XML in its native form exist, a format that does away with superfluous tags, making XML easy to validate and process in a distributed manner cannot be a bad thing.
 
 ## Recommendations   
 1. The structure and content of an XML Line Record can be defined using an XSD Schema. It is recommend to use XSD Schema based validation while reading an XML Line Record, especially when dealing with untrusted third parties.
